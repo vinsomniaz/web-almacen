@@ -1,0 +1,158 @@
+:root {
+    --color-azul: #062274;
+    --color-verde: #83c201;
+    --blanco: #ffffff;
+    --gris-claro: #f5f5f5;
+    --gris: #ccc;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    padding: 20px;
+    background-color: var(--gris-claro);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border-top: 6px solid var(--color-verde);
+  }
+  
+  .logo {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--color-azul);
+  }
+  
+  .form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-azul);
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #06227483;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: #83c201;
+  }
+
+  .btn-login {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--color-azul);
+    color: var(--blanco);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .btn-login:hover {
+    background: var(--color-verde);
+    color: var(--color-azul);
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    display: block;
+    text-align: center;
+  }
+  
+  /* Para el campo contraseña - ojo */
+
+  .password-container {
+    position: relative;
+}
+
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-input-wrapper input {
+    padding-right: 50px; /* Espacio para el ojito */
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+.eye-icon {
+    font-size: 1.2em;
+    color: #062274;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover .eye-icon{
+    color: #83c201;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 480px) {
+.login-container {
+    padding: 1.5rem;
+    margin: 20px;
+    border-radius: 12px;
+}
+    
+h2 {
+    font-size: 1.3rem;
+}
+    
+.form-group input {
+    padding: 0.65rem;
+}
+    
+.btn-login {
+    padding: 0.8rem;
+}
+
+}
